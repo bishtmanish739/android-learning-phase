@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -16,7 +17,7 @@ public class newActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new);
         Intent intent=getIntent();
         String s=intent.getStringExtra("hindi");
-        TextView textView=findViewById(R.id.textView);
-        textView.setText(s);
+        WebView webView=findViewById(R.id.webview);
+        webView.loadUrl("https://www.google.com");
     }
 }
